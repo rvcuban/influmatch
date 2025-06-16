@@ -71,7 +71,7 @@ export default function RegisterPage() {
         router.push('/app/business-analyzer')
         router.refresh()
       }
-    } catch (err) {
+    } catch {
       setError('Ocurrió un error inesperado')
     } finally {
       setLoading(false)
@@ -91,7 +91,7 @@ export default function RegisterPage() {
       if (error) {
         setError(error.message)
       }
-    } catch (err) {
+    } catch {
       setError('Ocurrió un error al registrarse con Google')
     }
   }

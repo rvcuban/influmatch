@@ -31,7 +31,7 @@ export default function HomePage() {
             </h1>
             <p className="py-6 text-xl animate-slide-up">
               🔍 Encuentra y 🚀 Conecta con influencers virales en tu nicho
-              <br />— consigue 100's de nuevos clientes mientras duermes
+              <br />— consigue 100&apos;s de nuevos clientes mientras duermes
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center animate-slide-up">
               <Link href="/register" className="btn btn-primary btn-lg">

@@ -105,7 +105,7 @@ export default function WizardNichesPage() {
                 💡 Recomendación basada en tu producto:
               </p>
               <p className="text-sm">
-                Para productos de la categoría "{CATEGORIES.find(c => c.id === wizard.productDetails?.category)?.name}", 
+                Para productos de la categoría &ldquo;{CATEGORIES.find(c => c.id === wizard.productDetails?.category)?.name}&rdquo;, 
                 también podrías considerar influencers de categorías relacionadas.
               </p>
             </div>

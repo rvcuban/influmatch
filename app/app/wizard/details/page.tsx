@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import { useRouter } from 'next/navigation'
+import Image from 'next/image'
 import { useStore } from '@/lib/store/use-store'
 import { ArrowLeftIcon, ArrowRightIcon } from '@heroicons/react/24/outline'
 import { CATEGORIES } from '@/lib/constants'
@@ -181,14 +182,17 @@ export default function WizardDetailsPage() {
             <div className="mt-6">
               <p className="text-sm text-base-content/70 mb-2">Vista previa de imagen:</p>
               <div className="w-full max-w-xs mx-auto">
-                <img
-                  src={formData.imageUrl}
-                  alt="Vista previa"
-                  className="rounded-lg shadow-md"
-                  onError={(e) => {
-                    e.currentTarget.style.display = 'none'
-                  }}
-                />
+                <div className="relative w-full h-48">
+                  <Image
+                    src={formData.imageUrl}
+                    alt="Vista previa"
+                    fill
+                    className="rounded-lg shadow-md object-cover"
+                    onError={(e) => {
+                      e.currentTarget.style.display = 'none'
+                    }}
+                  />
+                </div>
               </div>
             </div>
           )}

@@ -9,7 +9,6 @@ import {
   SparklesIcon,
   CubeIcon,
   UserGroupIcon,
-  ChartBarIcon,
   Cog6ToothIcon,
   ArrowRightOnRectangleIcon,
   Bars3Icon,
@@ -19,7 +18,10 @@ import {
 } from '@heroicons/react/24/outline'
 
 interface AppShellProps {
-  user: any
+  user: {
+    full_name?: string
+    company_name?: string
+  } | null
   children: React.ReactNode
 }
 
@@ -134,9 +136,16 @@ function SidebarContent({
   user,
   onLogout,
 }: {
-  navigation: any[]
+  navigation: Array<{
+    name: string
+    href: string
+    icon: React.ComponentType<{ className?: string }>
+  }>
   pathname: string
-  user: any
+  user: {
+    full_name?: string
+    company_name?: string
+  } | null
   onLogout: () => void
 }) {
   return (

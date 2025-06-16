@@ -31,7 +31,7 @@ export default function LoginPage() {
         router.push('/app/dashboard')
         router.refresh()
       }
-    } catch (err) {
+    } catch {
       setError('Ocurrió un error inesperado')
     } finally {
       setLoading(false)
@@ -51,7 +51,7 @@ export default function LoginPage() {
       if (error) {
         setError(error.message)
       }
-    } catch (err) {
+    } catch {
       setError('Ocurrió un error al iniciar sesión con Google')
     }
   }

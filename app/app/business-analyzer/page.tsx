@@ -15,7 +15,21 @@ export default function BusinessAnalyzerPage() {
     mainGoals: '',
     currentChallenges: '',
   })
-  const [analysis, setAnalysis] = useState<any>(null)
+  const [analysis, setAnalysis] = useState<{
+    businessType: string
+    recommendedCategories: string[]
+    influencerStrategy: {
+      type: string
+      reason: string
+    }
+    estimatedBudget: {
+      min: number
+      max: number
+      currency: string
+    }
+    keyRecommendations: string[]
+    successProbability: number
+  } | null>(null)
 
   const handleChange = (e: React.ChangeEvent<HTMLTextAreaElement | HTMLSelectElement>) => {
     setFormData({
